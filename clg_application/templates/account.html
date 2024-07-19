@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %} 
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+<div class="container mt-5">
+    <div class="main">
+        <div class="left">
+            <div class="image">
+                <img src="https://proteins.plus/assets/ProteinPlus_Logo-08ee009a84b8e507aff21512cc054c13f7d4463e03ff59e99c0db08cac35f15a.png" alt="Protein Plus Logo">
+            </div>
+        </div>
+        <div class="right">
+            <div class="input">
+                <div class="input_field">
+                    <label class="control-label proteinsplusInputForm" for="pdb_file_name">PDB-Code (PDB Database) or UniProt accession number (AlphaFold Database) or search term:</label>
+                    <input class="form-control" type="text" name="pdb_file[name]" id="pdb_file_name">
+                </div>
+                <div class="input_files">
+                    <label for="pdb_file_pathvar">Upload Protein (PDB format):</label>
+                    <input type="file" name="pdb_file[pathvar]" id="pdb_file_pathvar" style="text-align: center;">
+                    <label for="pdb_file_userligand">Upload Ligand (SDF format):</label>
+                    <input type="file" name="pdb_file[userligand]" id="pdb_file_userligand" style="text-align: center;">
+                </div>
+            </div>
+            <div class="go_btn">
+                <label for="submit_button"><a href="#">Advanced Search</a></label>
+                <button class="btn_submit" type="submit" id="submit_button" name="submit_button">Go!</button>
+            </div>
+        </div>    
+    </div>
+</div>
+{% endblock %}

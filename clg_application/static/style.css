@@ -1,0 +1,33 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;  
+    justify-content: center; /* Centered navigation */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px; /* Adjust padding for better click area */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+nav a:hover {
+    background-color: #dc3545; /* Bootstrap red for consistency */
+    color: white;
+}
