@@ -18,13 +18,15 @@ def login():
             return redirect(url_for("main.account"))
         else:
             flash("Invalid Email or password  ",'failure')
-    return render_template("login.html")
+    return render_template("login2.html")
         
 
 @auth.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        name = request.form['name']
+        fname = request.form['fname']
+        lname = request.form['lname']
+        name = fname + ' ' + lname
         email = request.form["email"]
         password = request.form["password"]
         confirm_password = request.form["confirm_password"]
@@ -47,7 +49,7 @@ def signup():
         return redirect(url_for("auth.login"))
     
     # Handle GET request: render the signup page
-    return render_template('signup.html')
+    return render_template('signup2.html')
 
 @auth.route('/logout')
 @login_required
@@ -55,5 +57,5 @@ def logout():
     logout_user()
     return redirect(url_for('main.index'))
 
-
+ 
 

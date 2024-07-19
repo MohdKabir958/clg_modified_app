@@ -1,15 +1,49 @@
-{%extends "base.html" %}
+{% extends "base2.html" %}
 
 {% block head %}
- {{ super() }}
-{% endblock %} 
+    {{ super() }}
+    {% endblock %}
+    
+    
+    {% block content %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='style_index.css') }}">
+<body>
+
+    <section class="1">
+        <div class="main">
+            <div class="main_left">
+                <h1>Chairman's Message</h1>
+                <p>
+                    Pragnya Degree Colleges in Hyderabad owns an as integrated objective i.e. quality education that
+                    meets today’s industrial requirements and the ability to face challenges in the real world.
+                    Therefore, every student from Pragnya Degree Colleges in Hyderabad will extend their wings to fly
+                    high and aspire to their dreams.
+                </p>
+            </div>
+            <div class="main_right">
+                <img src="/static/images_folder/chairman.webp" alt="chairman" id="chairman">
+                <h3>S. SREENIVASA REDDY</h3>
+                <p> M.Com, LLB <br>
+                    CHAIRMAN </p>
+            </div>
+        </div>
+    </section>
 
 
 
-{% block content %}
-<h1>This is index file </h1>
 
 
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new
+            Typed('#element', {
+                strings: ['BCA STUDENT PORTAL'],
+                typeSpeed: 50, Loop: 50,
+            });
+    </script>
+</body>
+
+</html>
 
 {% endblock %}
-
